@@ -1,0 +1,66 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <base href="/">
+    <title>Share dat wallpaper!</title>
+
+    <!--CSS-->
+    <link rel="stylesheet" href="libs/bootstrap/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/style.css"> <!-- custom styles -->
+
+    <!--JS-->
+    <script src="libs/angular/angular.js"></script>
+    <script src="libs/angular-route/angular-route.js"></script>
+
+    <!-- Include the controllers and services -->
+    <script src="js/controllers/SortNewCtrl.js"></script>
+    <script src="js/controllers/SortBestCtrl.js"></script>
+    <script src="js/services/InstagramService.js"></script>
+
+    <!--required stuff-->
+    <script src="js/appRoutes.js"></script>
+    <script src="js/app.js"></script>
+    <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.0.7/angular-resource.min.js"></script>
+
+</head>
+
+<body ng-app="mbwApp" ng-controller="SortNewController">
+    <div class="container">
+        <!-- HEADER pictures categories -->
+        <nav id="categories" class="{{active}}" ng-click="$event.preventDefault()">
+            <a href="#" class="urban" ng-click="active='urban'">Urban</a>
+            <a href="#" class="cyberpunk" ng-click="active='cyberpunk'">Cyberpunk</a>
+            <a href="#" class="gaming" ng-click="active='gaming'">Gaming</a>
+            <a href="#" class="nature" ng-click="active='nature'">Nature</a>
+            <a href="#" class="space" ng-click="active='space'">Space</a>
+            <!--
+            <div class="navbar-header">
+                <a class="navbar-brand" href="">Nature</a>
+            </div>
+            -->
+        </nav><br>
+        
+        <!--<p ng-hide="active"></p>
+        <p ng-show="active"></p>-->
+
+        <!-- HEADER new, best -->
+        <nav id="sorting" class="{{sort}}">
+            <a href="/new" class="new" ng-click="sort='new'">New</a>
+            <a href="/best" class="best" ng-click="sort='best'">Best</a>
+            <!--
+            <div class="navbar-header">
+                <a class="navbar-brand" href="/new">New</a>
+                <a class="navbar-brand" href="/best">Best</a>
+            </div>
+            -->
+        </nav>
+
+        <!-- Angular Dynamic contents -->
+        <div ng-view></div>
+
+    </div>
+</body>
+
+</html>

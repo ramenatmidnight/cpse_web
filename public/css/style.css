@@ -1,0 +1,90 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    font: 15px/1.3 'Ubuntu', sans-serif;
+    color: #5e5b64;
+    text-align: center;
+}
+
+section, footer, header, aside, nav{
+    display: block;
+}
+
+/* --------- Menu --------- */
+nav{
+    display: inline-block;
+    margin: 10px auto 15px;
+    background-color: #5597b6;
+    box-shadow: 0 1px 1px #ccc;
+    border-radius: 2px;
+}
+
+nav a{
+    display: inline-block;
+    padding: 18px 30px;
+    color: #fff !important;
+    font-weight: bold;
+    font-size: 16px;
+    text-decoration: none !important;
+    line-height: 1;
+    text-transform: uppercase;
+    background-color: transparent;
+
+    -webkit-transition: background-color 0.1s;
+    -moz-transition: background-color 0.1s;
+    transition: background-color 0.1s;
+}
+
+nav a:first-child{
+    border-radius: 2px 0 0 2px;
+}
+
+nav a:last-child{
+    border-radius: 0 2px 2px 0;
+}
+
+
+
+/* color change when selected */
+nav.urban .urban,
+nav.cyberpunk .cyberpunk,
+nav.gaming .gaming,
+nav.nature .nature,
+nav.space .space{
+    background-color: #e35885;
+}
+
+nav.new .new,
+nav.best .best{
+    background-color: #e35885;
+}
+
+/* --------- Grid layout --------- */
+ul.grid{
+    list-style: none;
+    width: 1140px;
+    margin: 0 auto;
+    text-align: left;
+}
+
+ul.grid li{
+    padding: 2px;
+    float: left;
+}
+
+ul.grid li img{
+    width: 280px;
+    height: 280px;
+    display: block;
+    border:none;
+}
+
+/* --------- Img resize --------- */
+img{
+    max-width:100%;
+    width:320px;
+    height:auto;
+}
